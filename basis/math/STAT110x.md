@@ -296,11 +296,8 @@ proof for adam's law
 ## 6.8 Eve's law and conditional variance
 ![cbd939de62c7fc50d5379462c2709555.png](../_resources/cbd939de62c7fc50d5379462c2709555.png)
 ![0ca25fde2f015dbe4f9bc37009a5902c.png](../_resources/0ca25fde2f015dbe4f9bc37009a5902c.png)
-- between group variation:$Var(E(Y|X))$
-- 
-- within-group variation:$E(Var(Y|X))$
-- 
-
+- between group variation: $Var(E(Y|X))$
+- within-group variation: $E(Var(Y|X))$
 ![83dd28d07fa69a3dd63c21d95b97a702.png](../_resources/83dd28d07fa69a3dd63c21d95b97a702.png)
 ![9dd697d27744e2ca71d29d4ae769bb1e.png](../_resources/9dd697d27744e2ca71d29d4ae769bb1e.png)
 

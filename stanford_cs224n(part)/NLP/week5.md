@@ -57,7 +57,9 @@ ps:"+"代表元素级别的加法，理论上也可以进行向量拼接，但�
 
 ### decoder
 这个才是正儿八经的语言模型
-$y$~$Ah_T+b$:微调时的分类器用的
+
+ $y$ ~ $Ah_T+b$ :
+微调时的分类器用的
 ![c73eb302170cc879a692452fb80eb6dd.png](../_resources/c73eb302170cc879a692452fb80eb6dd.png)  
 ![b4699b5a20ed32046d1fba90e151c3ee.png](../_resources/b4699b5a20ed32046d1fba90e151c3ee.png)
 
@@ -266,11 +268,9 @@ musked_string=musked_string_q+self.PAD_CHAR*(self.block_size+1-len(musked_string
 我们需要证明 RoPE 嵌入的两个向量在位置 $t_1$ 和 $t_2$ 的点积仅依赖于它们的相对位置 $t_1 - t_2$。具体来说：
 
 对于二维特征向量（表示为复数 $z_1 = a + ib$ 和 $z_2 = c + id$），RoPE 嵌入的点积满足：
-
-$$
+```math
 \langle \text{RoPE}(z_1, t_1), \text{RoPE}(z_2, t_2) \rangle = \langle \text{RoPE}(z_1, t_1 - t_2), \text{RoPE}(z_2, 0) \rangle
-$$
-
+```
 其中：
 - $\langle \cdot, \cdot \rangle$ 表示点积。
 - $\text{RoPE}(z, t)$ 是向量 $z$ 在位置 $t$ 的 RoPE 嵌入。
@@ -282,25 +282,20 @@ $$
 
 1. **复数旋转操作**  
    对于二维向量 $z = a + ib$，RoPE 嵌入在位置 $t$ 的操作是乘以旋转因子：
-
-   $$
+   ```math
    e^{i t \theta} = \cos t\theta + i \sin t\theta
-   $$
-
+   ```
    因此：
-
-   $$
+   ```math
    \text{RoPE}(z, t) = e^{i t \theta} \cdot z = (a \cos t\theta - b \sin t\theta) + i (a \sin t\theta + b \cos t\theta)
-   $$
+   ```
 
 
 2. **点积定义**  
    复数的点积：
-
-   $$
+   ```math
    \langle z_1, z_2 \rangle = \text{Re}(\overline{z_1} z_2)
-   $$
-
+   ```
 
 ---
 
@@ -308,13 +303,13 @@ $$
 
 计算 $\langle \text{RoPE}(z_1, t_1), \text{RoPE}(z_2, t_2) \rangle$：
 
-$$
+```math
 \begin{align*}
 \text{Re} &= (a \cos t_1 \theta - b \sin t_1 \theta)(c \cos t_2 \theta - d \sin t_2 \theta) \\
           &+ (a \sin t_1 \theta + b \cos t_1 \theta)(c \sin t_2 \theta + d \cos t_2 \theta) \\
           &= (ac + bd) \cos((t_1 - t_2)\theta) + (ad - bc) \sin((t_1 - t_2)\theta)
 \end{align*}
-$$
+```
 
 
 同理，计算 $\langle \text{RoPE}(z_1, t_1 - t_2), \text{RoPE}(z_2, 0) \rangle$ 会得到相同结果。

@@ -282,20 +282,14 @@ musked_string=musked_string_q+self.PAD_CHAR*(self.block_size+1-len(musked_string
 
 1. **复数旋转操作**  
    对于二维向量 $z = a + ib$，RoPE 嵌入在位置 $t$ 的操作是乘以旋转因子：
-   ```math
-   e^{i t \theta} = \cos t\theta + i \sin t\theta
-   ```
+   $$e^{i t \theta} = \cos t\theta + i \sin t\theta$$
    因此：
-   ```math
-   \text{RoPE}(z, t) = e^{i t \theta} \cdot z = (a \cos t\theta - b \sin t\theta) + i (a \sin t\theta + b \cos t\theta)
-   ```
+   $$\text{RoPE}(z, t) = e^{i t \theta} \cdot z = (a \cos t\theta - b \sin t\theta) + i (a \sin t\theta + b \cos t\theta)$$
 
 
-2. **点积定义**  
+3. **点积定义**  
    复数的点积：
-   ```math
-   \langle z_1, z_2 \rangle = \text{Re}(\overline{z_1} z_2)
-   ```
+   $$\langle z_1, z_2 \rangle = \text{Re}(\overline{z_1} z_2)$$
 
 ---
 

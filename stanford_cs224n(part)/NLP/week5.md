@@ -282,25 +282,32 @@ $$
 
 1. **复数旋转操作**  
    对于二维向量 $z = a + ib$，RoPE 嵌入在位置 $t$ 的操作是乘以旋转因子：
+
    $$
    e^{i t \theta} = \cos t\theta + i \sin t\theta
    $$
+
    因此：
+
    $$
    \text{RoPE}(z, t) = e^{i t \theta} \cdot z = (a \cos t\theta - b \sin t\theta) + i (a \sin t\theta + b \cos t\theta)
    $$
 
+
 2. **点积定义**  
    复数的点积：
+
    $$
    \langle z_1, z_2 \rangle = \text{Re}(\overline{z_1} z_2)
    $$
+
 
 ---
 
 ### 等价性证明（代码块与公式混合）
 
 计算 $\langle \text{RoPE}(z_1, t_1), \text{RoPE}(z_2, t_2) \rangle$：
+
 $$
 \begin{align*}
 \text{Re} &= (a \cos t_1 \theta - b \sin t_1 \theta)(c \cos t_2 \theta - d \sin t_2 \theta) \\
@@ -308,6 +315,7 @@ $$
           &= (ac + bd) \cos((t_1 - t_2)\theta) + (ad - bc) \sin((t_1 - t_2)\theta)
 \end{align*}
 $$
+
 
 同理，计算 $\langle \text{RoPE}(z_1, t_1 - t_2), \text{RoPE}(z_2, 0) \rangle$ 会得到相同结果。
 

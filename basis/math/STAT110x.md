@@ -224,9 +224,10 @@ CDF的可视化很困难，PMF用的更多
 ### 鸡蛋例子
 问题描述:鸡生蛋的数量(N)服从泊松分布($\lambda$)，每个蛋是否孵化服从二项分布
 X为孵化成功的，Y为孵化失败的，其联合分布
-$$P(X=i,Y=j)=\frac{e^{-p\lambda}(p\lambda)^i*e^{-q\lambda}*(q\lambda)^j}{i!*j!}$$
+$P(X=i,Y=j)=\frac{e^{-p\lambda}(p\lambda)^i*e^{-q\lambda}*(q\lambda)^j}{i!*j!}$	
 可以发现可视为X，Y均服从泊松分布，且相互独立
-![77de1c4671aeb367154bc815d760968b.png](../_resources/77de1c4671aeb367154bc815d760968b.png)
+![77de1c4671aeb367154bc815d760968b.png](../_resources/77de1c4671aeb367154bc815d760968b.png)		
+
 唯一由pdf得到非零的概率的方法就是沿着一个区域积分（沿着线积分也是0）
 ![fe68badbe918ced5ada7239d3a382db0.png](../_resources/fe68badbe918ced5ada7239d3a382db0.png)
 ![e2afb2c6ef10cd7749efab26d390ff52.png](../_resources/e2afb2c6ef10cd7749efab26d390ff52.png)

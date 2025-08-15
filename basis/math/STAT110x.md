@@ -135,7 +135,9 @@ isomorphic:同构的
 ![2bd1c048c61c7fb6b54f4301fc20818d.png](../_resources/2bd1c048c61c7fb6b54f4301fc20818d.png)
 ![23a91e35c0511f96db8319d544878b3b.png](../_resources/23a91e35c0511f96db8319d544878b3b.png)
 - fact(U服从标准均匀分布)
-$$P(U\leq u)=u\  for\ u\in(0,1) $$
+$$
+P(U\leq u)=u\  for\ u\in(0,1) 
+$$
 ## 4.4 normal
 ![b7808e8b6637d6568e14c335d713e5d9.png](../_resources/b7808e8b6637d6568e14c335d713e5d9.png)
 ![97bf0bb8f42f58d3c7f96e0773411f4d.png](../_resources/97bf0bb8f42f58d3c7f96e0773411f4d.png)
@@ -147,28 +149,35 @@ $$P(U\leq u)=u\  for\ u\in(0,1) $$
 ## 4.6 poisson processes
 ![0127988d23d7784fde247a9677408dad.png](../_resources/0127988d23d7784fde247a9677408dad.png)
 - 在泊松过程中，t秒内无抵达的概率和t秒时抵达数为0是同一事件，所以有
-$$P(T_1>t)=p(N_t=0)=e^{-\lambda t}$$
+$$
+P(T_1>t)=p(N_t=0)=e^{-\lambda t}
+$$
 ![ea4077b68a7883e1843930e38be8d9cd.png](../_resources/ea4077b68a7883e1843930e38be8d9cd.png)
 ## work
 ![4fe413cb701b6985e88b57bc2648a2dd.png](../_resources/4fe413cb701b6985e88b57bc2648a2dd.png)
 - 对称性的理解：两者是独立同分布，
-$$P(T_a>T_b)=P(T_b>T_a)$$
+$$
+P(T_a>T_b)=P(T_b>T_a)
+$$
 而两者包含了所有的情况，和为1
 ### 泊松过程：(“计数-时间对偶性” (Count-Time Duality))
 #### 无记忆性：
 时间角度，服从指数分布，等了多久对接下来还要等多久毫无影响
 #### 计数角度：
-$$P(N(t)=k)=P(k\ cars\ arrive\ in\ t\ hours)=\frac{( (λt)^k * e^{-λt} )} { k!}$$
+$$
+P(N(t)=k)=P(k\ cars\ arrive\ in\ t\ hours)=\frac{( (λt)^k * e^{-λt} )} { k!}
+$$
 - 小于3，求和0,1,2
 ## word
 analogous:类似的
 quantile：分位数
 # unit5 averages law of large numbers,and central limit theorem
 ## 5.1 expectation
-![545c6548230b835c794dc873b0333e85.png](../_resources/545c6548230b835c794dc873b0333e85.png)
+![545c6548230b835c794dc873b0333e85.png](../_resources/545c6548230b835c794dc873b0333e85.png) 
 $E(X-3)^2=E((X-3)^2)$
 ## 5.2  Linearity of expectation
-超几何的期望：$E(X)=\frac{nw}{w+b}$
+超几何的期望： 
+$E(X)=\frac{nw}{w+b}$
 ## 5.3 Geometric and Negative Binomial
 ![9f67d5daa50736ef396d1de13ac800ee.png](../_resources/9f67d5daa50736ef396d1de13ac800ee.png)
 - 这个是没考虑成功的那次的，考虑的叫first success distribution(FS)
@@ -195,7 +204,10 @@ $E(X-3)^2=E((X-3)^2)$
 ![2bbd9e4e9f6621415c2e372fd5b65dd5.png](../_resources/2bbd9e4e9f6621415c2e372fd5b65dd5.png)
 ## 5.7 poisson
 ![38c16a8207666193b472a4886566b23e.png](../_resources/38c16a8207666193b472a4886566b23e.png)
-其均值和方差均为$\lambda$
+其均值和方差均为 
+
+$\lambda$
+
 ![5e87fe8a152e588ba6fe512def5f2ce7.png](../_resources/5e87fe8a152e588ba6fe512def5f2ce7.png)
 ![e32c8377be6b99e0af07f66929b3e50f.png](../_resources/e32c8377be6b99e0af07f66929b3e50f.png)
 ## 5.8 Expectation of a continuous random variable
@@ -224,7 +236,10 @@ CDF的可视化很困难，PMF用的更多
 ### 鸡蛋例子
 问题描述:鸡生蛋的数量(N)服从泊松分布($\lambda$)，每个蛋是否孵化服从二项分布
 X为孵化成功的，Y为孵化失败的，其联合分布
-$P(X=i,Y=j)=\frac{e^{-p\lambda}(p\lambda)^i*e^{-q\lambda}*(q\lambda)^j}{i!*j!}$	
+$$
+P(X=i,Y=j)=\frac{e^{-p\lambda}(p\lambda)^i*e^{-q\lambda}*(q\lambda)^j}{i!*j!}
+$$	
+
 可以发现可视为X，Y均服从泊松分布，且相互独立
 ![77de1c4671aeb367154bc815d760968b.png](../_resources/77de1c4671aeb367154bc815d760968b.png)		
 
@@ -284,8 +299,12 @@ proof for adam's law
 ## 6.8 Eve's law and conditional variance
 ![cbd939de62c7fc50d5379462c2709555.png](../_resources/cbd939de62c7fc50d5379462c2709555.png)
 ![0ca25fde2f015dbe4f9bc37009a5902c.png](../_resources/0ca25fde2f015dbe4f9bc37009a5902c.png)
-- between group variation:$Var(E(Y|X))$
-- within-group variation:$E(Var(Y|X))$
+- between group variation:	
+- $Var(E(Y|X))$
+- 
+- within-group variation:	
+- $E(Var(Y|X))$
+- 
 
 ![83dd28d07fa69a3dd63c21d95b97a702.png](../_resources/83dd28d07fa69a3dd63c21d95b97a702.png)
 ![9dd697d27744e2ca71d29d4ae769bb1e.png](../_resources/9dd697d27744e2ca71d29d4ae769bb1e.png)
@@ -310,7 +329,9 @@ marginal:边缘
 ![03708d06cd7cefb179c38c54e031d65e.png](../_resources/03708d06cd7cefb179c38c54e031d65e.png)
 ![3c894dc48e760ac46392d34afec6826b.png](../_resources/3c894dc48e760ac46392d34afec6826b.png)
 ![8976fb63f2aba9dd6e972962ef4c5e56.png](../_resources/8976fb63f2aba9dd6e972962ef4c5e56.png)
-$$q^{(n)}_{ij}is\ the (i,j) entry\ of\ Q^n$$
+$$
+q^{(n)}_{ij}is\ the (i,j) entry\ of\ Q^n
+$$
 ![4dc672d38559170016d4c06e772e8793.png](../_resources/4dc672d38559170016d4c06e772e8793.png)
 ## 7.2 Classification of states
 ![50c23b09c84d22a2c720791b6c3e8a76.png](../_resources/50c23b09c84d22a2c720791b6c3e8a76.png)
@@ -330,9 +351,14 @@ $d(i)=gcd\{n\ge1:p^{n}(i,i)\gt0\}$
 ![13daeb829bfca23b38284752bfc6c565.png](../_resources/13daeb829bfca23b38284752bfc6c565.png)
 ![fc85a0e07945208844437ab9551f1767.png](../_resources/fc85a0e07945208844437ab9551f1767.png)
 ### google pagerank
-视各网站的链接形成的网络为马尔科夫链，看其收敛之后，修正如下(为了给网络一定的再生长能力)
-$$G=\alpha Q+(1-\alpha)\frac{J}{M}$$
-$$tG^n->s \ as\ n->∞$$
+视各网站的链接形成的网络为马尔科夫链，看其收敛之后，修正如下(为了给网络一定的再生长能力)	
+$$
+G=\alpha Q+(1-\alpha)\frac{J}{M}
+$$
+
+$$
+tG^n->s \ as\ n->∞
+$$
 其中M为矩阵的size，J为全一矩阵
 ## 7.4 Reversibility(可逆性)
 ![a6a5c95ce63a3d7d12bc5906810836d4.png](../_resources/a6a5c95ce63a3d7d12bc5906810836d4.png)
@@ -346,7 +372,7 @@ $$tG^n->s \ as\ n->∞$$
 - third
 	- Third and finally, if in each time period a Markov chain can only move one step to the left, one step to the right, or stay in place, then it is called a birth-death chain. All birth-death chains are reversible.
 	- ![7a5c56941b311161f3eaa55a0952ca29.png](../_resources/7a5c56941b311161f3eaa55a0952ca29.png)
-	- 然后解方程使$S_1$满足和为1即可
+	- 然后解方程使 $S_1$ 满足和为1即可
 棋盘类：注意很好的对称性，一般按可达到的状态分成几个状态向量(每种的个数与度数的乘积计算)
 ![7db161a97efc9f32ad07259d9fea2dd4.png](../_resources/7db161a97efc9f32ad07259d9fea2dd4.png)
 ## word
